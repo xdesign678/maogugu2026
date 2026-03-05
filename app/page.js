@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect, useCallback } from 'react';
+import Link from 'next/link';
 
 // --- Analysis logic (same as original) ---
 
@@ -485,15 +486,18 @@ export default function Home() {
             {' '}美股直接输入代码 (AAPL, MSFT)；A股加 .SS/.SZ (600519.SS, 000858.SZ)；港股加 .HK (0700.HK, 9988.HK)；日股加 .T (7203.T)
           </div>
 
-          <div className="guide">
-            <strong>段永平&ldquo;毛估估&rdquo;核心方法</strong>
+          <Link href="/methodology" className="guide" style={{ display: 'block', textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <strong>段永平&ldquo;毛估估&rdquo;核心方法</strong>
+              <span style={{ color: 'var(--gold)', fontSize: '.75rem', fontFamily: 'var(--font-m)', letterSpacing: '.04em' }}>点击了解详情 &rarr;</span>
+            </div>
             <ul>
               <li>存银行本金法（简化估值）</li>
               <li>DCF 现金流折现法</li>
               <li>PE 市盈率参考（含局限性警告）</li>
             </ul>
             <em>本工具使用 Yahoo Finance 实时数据。仅供学习研究，不构成投资建议。</em>
-          </div>
+          </Link>
         </div>
 
         {/* Analysis Panel */}
