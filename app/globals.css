@@ -17,28 +17,28 @@
   --shadow-lg:0 16px 48px rgba(0,0,0,.4);
   --shadow-glow:0 0 40px rgba(201,162,39,.08);
 }
-/* Light theme */
+/* Light theme - Claude / Anthropic warm cream style */
 [data-theme="light"]{
-  --bg-0:#f5f7fa;--bg-1:#ffffff;--bg-2:#eef1f6;--bg-3:#e2e6ee;--bg-4:#d5dae4;
-  --tx-0:#1a1e2e;--tx-1:#3a4258;--tx-2:#5a6578;--tx-3:#8a95a8;
-  --gold:#8b7110;--gold-dim:rgba(139,113,16,.10);--gold-glow:rgba(139,113,16,.06);
-  --green:#178a40;--green-dim:rgba(23,138,64,.08);
-  --amber:#b87208;--amber-dim:rgba(184,114,8,.08);
-  --red:#cc2d2d;--red-dim:rgba(204,45,45,.08);
-  --border:rgba(0,0,0,.07);--border-h:rgba(0,0,0,.14);
-  --glass:rgba(255,255,255,.6);--glass-border:rgba(0,0,0,.06);
-  --shadow-sm:0 2px 8px rgba(0,0,0,.06);
-  --shadow-md:0 8px 32px rgba(0,0,0,.08);
-  --shadow-lg:0 16px 48px rgba(0,0,0,.1);
-  --shadow-glow:0 0 40px rgba(139,113,16,.06);
+  --bg-0:#faf9f5;--bg-1:#ffffff;--bg-2:#f5f4ed;--bg-3:#f0eee6;--bg-4:#e8e6dd;
+  --tx-0:#141413;--tx-1:#3d3d3a;--tx-2:#73726c;--tx-3:#a5a39b;
+  --gold:#8b6914;--gold-dim:rgba(139,105,20,.10);--gold-glow:rgba(139,105,20,.06);
+  --green:#1a8a3e;--green-dim:rgba(26,138,62,.08);
+  --amber:#b07008;--amber-dim:rgba(176,112,8,.08);
+  --red:#c73030;--red-dim:rgba(199,48,48,.08);
+  --border:rgba(31,30,29,.10);--border-h:rgba(31,30,29,.18);
+  --glass:rgba(255,255,255,.65);--glass-border:rgba(31,30,29,.08);
+  --shadow-sm:0 1px 4px rgba(31,30,29,.06);
+  --shadow-md:0 4px 20px rgba(31,30,29,.07);
+  --shadow-lg:0 12px 40px rgba(31,30,29,.09);
+  --shadow-glow:0 0 32px rgba(139,105,20,.04);
 }
 
 html{font-size:16px;scroll-behavior:smooth}
 body{font-family:var(--font-b);background:var(--bg-0);color:var(--tx-0);line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh;overflow-x:hidden}
 body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 50% at 50% -10%,rgba(201,162,39,.06),transparent 60%);pointer-events:none;z-index:0}
 body::after{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(201,162,39,.015) 1px,transparent 1px),linear-gradient(90deg,rgba(201,162,39,.015) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;z-index:0}
-[data-theme="light"] body::before{background:radial-gradient(ellipse 80% 50% at 50% -10%,rgba(139,113,16,.04),transparent 60%)}
-[data-theme="light"] body::after{background-image:linear-gradient(rgba(0,0,0,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.025) 1px,transparent 1px)}
+[data-theme="light"] body::before{background:radial-gradient(ellipse 80% 50% at 50% -10%,rgba(180,160,100,.03),transparent 60%)}
+[data-theme="light"] body::after{background-image:linear-gradient(rgba(31,30,29,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(31,30,29,.018) 1px,transparent 1px)}
 
 .wrap{position:relative;z-index:1;max-width:1440px;margin:0 auto;padding:2rem}
 
@@ -357,7 +357,10 @@ header{display:flex;align-items:center;justify-content:space-between;margin-bott
   box-shadow:var(--shadow-md),0 0 20px var(--gold-glow);
 }
 
-/* ============ LIGHT THEME OVERRIDES ============ */
-[data-theme="light"] .logo-mark{box-shadow:0 0 20px rgba(139,113,16,.15),0 2px 6px rgba(0,0,0,.1);color:#1a1e2e}
-[data-theme="light"] .btn-analyze{color:#1a1e2e;box-shadow:0 4px 16px rgba(139,113,16,.2),inset 0 1px 0 rgba(255,255,255,.3)}
-[data-theme="light"] .btn-analyze:hover{box-shadow:0 6px 24px rgba(139,113,16,.3),inset 0 1px 0 rgba(255,255,255,.3)}
+/* ============ LIGHT THEME OVERRIDES (Claude style) ============ */
+[data-theme="light"] .logo-mark{box-shadow:0 0 16px rgba(139,105,20,.12),0 2px 6px rgba(31,30,29,.08);color:#141413}
+[data-theme="light"] .btn-analyze{color:#141413;box-shadow:0 2px 12px rgba(139,105,20,.15),inset 0 1px 0 rgba(255,255,255,.25)}
+[data-theme="light"] .btn-analyze:hover{box-shadow:0 4px 20px rgba(139,105,20,.22),inset 0 1px 0 rgba(255,255,255,.25)}
+[data-theme="light"] .ex-btn:hover{box-shadow:0 1px 4px rgba(31,30,29,.06)}
+[data-theme="light"] .moat-bar{background:var(--bg-3)}
+[data-theme="light"] .val-result{background:var(--bg-2)}
